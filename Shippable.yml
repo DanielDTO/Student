@@ -4,6 +4,11 @@ script: mvn test
 jdk:
   - oraclejdk8
   - openjdk8
+build:
+  ci:
+    - mvn clean
+    - mvn install-DskipTests= true
+    -mvn test
 notifications:
   email:
     on_success: never
